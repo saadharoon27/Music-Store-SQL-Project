@@ -8,8 +8,8 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Queries](#queries)
 - [About The Dataset](#about-the-dataset)
+- [Queries](#queries)
 - [SQL Commands](#sql-commands)
 
 ## Project Overview
