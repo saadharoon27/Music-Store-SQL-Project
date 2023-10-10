@@ -17,7 +17,7 @@ This repository contains a collection of **SQL queries** and solutions to a vari
 
 ## About The Dataset
 **Database Schema**
-![Schema](Music_Schema.png)
+![Schema](Music-Schema.png)
 
 ## Queries
 **Question Sets Included:**
