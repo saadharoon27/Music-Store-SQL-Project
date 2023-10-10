@@ -16,8 +16,10 @@
 This repository contains a collection of **SQL queries** and solutions to a variety of **data analysis questions**. These questions cover a wide range of topics and scenarios, from identifying **senior employees** based on job titles to finding the most popular **music genre** in different countries. The queries are designed to showcase **SQL skills** in querying and analyzing data, making them a valuable resource for anyone interested in SQL and data analysis.
 
 ## About The Dataset
-**Database Schema**
+**Database Schema**<br>
 ![Schema](MusicSchema.png)
+-------
+[Music Store Dataset](https://www.kaggle.com/datasets/syedibrahim03/music-store-dataset-sql-postgre)
 
 ## Queries
 **Question Sets Included:**
@@ -39,3 +41,4 @@ This repository contains a collection of **SQL queries** and solutions to a vari
   - 2. We want to find out the **most popular music Genre for each country**. We determine the most popular genre as the genre with the **highest amount of purchases**. Write a query that returns each country along with the **top Genre**. For countries where the **maximum number of purchases is shared**, return all Genres.
   - 3. Write a query that determines the **customer that has spent the most on music for each country**. Write a query that returns the **country** along with the **top customer** and **how much they spent**. For countries where the **top amount spent is shared**, provide all customers who spent this amount.
 
+## SQL Commands
