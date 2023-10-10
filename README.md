@@ -45,14 +45,14 @@ This repository contains a collection of **SQL queries** and solutions to a vari
 
 **Question Set 1**
 
-**Q1: Who is the senior most employee based on job title?**
+- **Q1: Who is the senior most employee based on job title?**
 ```sql
 SELECT * FROM employee
 ORDER BY levels DESC
 LIMIT 1;
 ```
 
-**Q2: Which countries have the most Invoices?**
+- **Q2: Which countries have the most Invoices?**
 ```sql
 SELECT COUNT(*) AS c, billing_country 
 FROM invoice
@@ -60,14 +60,14 @@ GROUP BY billing_country
 ORDER BY c DESC;
 ```
 
-**Q3: What are the top 3 values of total invoice?**
+- **Q3: What are the top 3 values of total invoice?**
 ```sql
 SELECT total FROM invoice
 ORDER BY total DESC
 LIMIT 3;
 ```
 
-**Q4: Which city has the best customers?**
+- **Q4: Which city has the best customers?**
 ```sql
 SELECT SUM(total) AS invoice_total, billing_city 
 FROM invoice
@@ -75,7 +75,7 @@ GROUP BY billing_city
 ORDER BY invoice_total;
 ```
 
-**Q5: Who is the best customer?**
+- **Q5: Who is the best customer?**
 ```sql
 SELECT customer.customer_id, customer.first_name, customer.last_name, SUM(invoice.total) AS total
 FROM customer
@@ -87,7 +87,7 @@ LIMIT 1;
 
 **Question Set 2**
 
-**Q1: Write a query to return the email, first name, last name, & Genre of all Rock Music listeners.**
+- **Q1: Write a query to return the email, first name, last name, & Genre of all Rock Music listeners.**
 ```sql
 SELECT DISTINCT email, first_name, last_name
 FROM customer
@@ -101,7 +101,7 @@ WHERE track_id IN (
 ORDER BY email;
 ```
 
-**Q2: Let's invite the artists who have written the most rock music.**
+- **Q2: Let's invite the artists who have written the most rock music.**
 ```sql
 SELECT artist.artist_id, artist.name, COUNT(artist.artist_id) AS number_of_songs
 FROM track
@@ -114,7 +114,7 @@ ORDER BY number_of_songs DESC
 LIMIT 10;
 ```
 
-**Q3: Return all track names with song length longer than the average.**
+- **Q3: Return all track names with song length longer than the average.**
 ```sql
 SELECT name, Milliseconds
 FROM track
@@ -127,7 +127,7 @@ ORDER BY Milliseconds DESC;
 
 **Question Set 3**
 
-**Q1: Find how much amount spent by each customer on artists.**
+- **Q1: Find how much amount spent by each customer on artists.**
 ```sql
 WITH best_selling_artist AS (
     SELECT artist.artist_id AS artist_id, artist.name AS artist_name, SUM(invoice_line.unit_price * invoice_line.quantity) AS total_sales
@@ -150,7 +150,7 @@ GROUP BY 1, 2, 3, 4
 ORDER BY 5 DESC;
 ```
 
-**Q2: Determine the most popular music Genre for each country.**
+- **Q2: Determine the most popular music Genre for each country.**
 ```sql
 WITH popular_genre AS (
     SELECT COUNT(invoice_line.quantity) AS purchases, customer.country, genre.name, genre.genre_id, 
@@ -166,7 +166,7 @@ WITH popular_genre AS (
 SELECT * FROM popular_genre WHERE RowNo <= 1;
 ```
 
-**Q3: Find the customer that has spent the most on music for each country.**
+- **Q3: Find the customer that has spent the most on music for each country.**
 ```sql
 WITH Customer_with_country AS (
     SELECT customer.customer_id, first_name, last_name, billing_country, SUM(total) AS total_spending,
