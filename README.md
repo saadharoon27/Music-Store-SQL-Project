@@ -19,7 +19,7 @@ This repository contains a collection of **SQL queries** and solutions to a vari
 **Database Schema**<br>
 ![Schema](MusicSchema.png)
 -------
-## [Music Store Dataset](https://www.kaggle.com/datasets/syedibrahim03/music-store-dataset-sql-postgre)
+##[Music Store Dataset](https://www.kaggle.com/datasets/syedibrahim03/music-store-dataset-sql-postgre)
 
 ## Queries
 **Question Sets Included:**
